@@ -440,6 +440,18 @@ fn test(mut x: i32) -> i32 {
     return x;
 }
 
+fn read_file() -> Result<String,io::Error> {
+    let f = File::open("hello.txt");
+    let mut mt = match f {
+        Ok(f) => f,
+        Err(e) => return Err(e)
+    };
+    let mut s = String::new();
+    match mt.read_to_string(&mut s){
+        Ok(_) => Ok(s),
+        Err(e) => Err(e)
+    }
+}
 
 
 fn read_str_file () -> Result<String,io::Error> {
