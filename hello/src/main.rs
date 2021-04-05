@@ -453,7 +453,6 @@ fn read_file() -> Result<String,io::Error> {
     }
 }
 
-
 fn read_str_file () -> Result<String,io::Error> {
     let f = File::open("hello.txt");
     let mut file = match f {

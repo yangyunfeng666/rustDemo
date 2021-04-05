@@ -13,4 +13,13 @@ mod tests{
     fn test() {
     assert_eq!(4,service_order(3));
     }
+
+    #[test]
+    fn aa() {
+        assert_eq!(dsd(1),3)
+    }
+
+    fn dsd (a:u32) ->u32 {
+        a+1
+    }
 }
